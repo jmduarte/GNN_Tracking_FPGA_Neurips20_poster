@@ -23,7 +23,6 @@
 \newcolumntype{Z}{>{\centering\arraybackslash}X} % centered tabularx columns
 \newcommand{\pphantom}{\textcolor{ta3aluminium}} % phantom introduces a vertical space in p formatted table columns??!!
 
-\setbeamercolor{headline}{fg=taaluminium,bg=black}
 \setbeamertemplate{headline}{  
   \leavevmode
 
@@ -32,10 +31,8 @@
       \begin{column}{.02\paperwidth}
       \end{column}
       \begin{column}{.1\paperwidth}
-        \vskip4ex
+        \vskip12ex
         \begin{center}
-          \includegraphics[width=1.1\linewidth]{}\\[6ex]
-          \includegraphics[width=1.1\linewidth]{}\\[6ex]%figures/UCSanDiegoLogo-White.png}\\[6ex]
           \includegraphics[width=1.1\linewidth]{figures/fml2.png}
         \end{center}
         \vskip2ex
@@ -48,10 +45,8 @@
         \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}     
       \end{column}
       \begin{column}{.1\paperwidth}
-        \vskip4ex
+        \vskip16ex
         \begin{center}
-          \includegraphics[width=1.1\linewidth]{}\\[6ex]
-          \includegraphics[width=1.1\linewidth]{}\\[6ex]
           \includegraphics[width=\linewidth]{figures/iris-hep.png}
         \end{center}
         \vskip2ex
@@ -66,8 +61,7 @@
     \rule{0pt}{3pt}
   \end{beamercolorbox}
 }
-%\setbeamercolor{footline}{fg=taorange, bg=black}
-\setbeamerfont{footline}{size=\large,series=\tt}
+
 \setbeamertemplate{footline}{
   \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
     \rule{0pt}{3pt}
@@ -92,29 +86,17 @@
 \setbeamercolor{separation line}{bg=taorange}
 \setbeamercolor{title in headline}{fg=taaluminium}
 \setbeamercolor{author in headline}{fg=taorange}
-%\setbeamercolor{institute in headline}{fg=taorange}
-
-%\setbeamercolor{framesubtitle}{fg=ta3orange, bg=ta2skyblue}
 \setbeamercolor{author in head/foot}{fg=taorange, bg=black}
-%\setbeamercolor{title in head/foot}{fg=taorange, bg=ta3skyblue}
-
 \setbeamercolor*{normal text}{fg=tachameleon, bg=white}
 \setbeamercolor*{block body}{fg=black,bg=white}
 \setbeamercolor*{block title}{fg=taorange,bg=black}
 \setbeamerfont{block title}{size=\large,series=\bf}
-%\setbeamercolor{upper separation line head}{fg=ta2orange,bg=black}
-%\setbeamercolor{upper separation line foot}{fg=ta2orange,bg=black}
-
-%\setbeamercolor*{example body}{fg=ta3aluminium,bg=black}
-%\setbeamercolor*{example text}{fg=ta3aluminium,bg=black}
-%\setbeamercolor*{example title}{fg=ta2gray,bg=taorange}
-
 \setbeamercolor{structure}{fg=ta3skyblue}
 
 \listfiles
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\graphicspath{{figures/}}
+%\graphicspath{{figures/}}
 
 \title{Accelerated Charged Particle Tracking with Graph Neural Networks on FPGAs}
 \author{Vesal Razavimaleki{\color{lightgray}\inst{1}}, Aneesh Heintz{\color{lightgray}\inst{2}}, \href{https://jduarte.physics.ucsd.edu}{Javier Duarte}{\color{lightgray}\inst{1}}, Gage DeZoort{\color{lightgray}\inst{3}}, Isobel Ojalvo{\color{lightgray}\inst{3}}, Savannah Thais{\color{lightgray}\inst{3}}, Markus Atkinson{\color{lightgray}\inst{4}}, Mark Neubauer{\color{lightgray}\inst{4}}, Lindsey Gray{\color{lightgray}\inst{5}}, Sergo Jindariani{\color{lightgray}\inst{5}}, Nhan Tran{\color{lightgray}\inst{5}}, Phil Harris{\color{lightgray}\inst{6}}, Dylan Rankin{\color{lightgray}\inst{6}}, Thea Aarrestad{\color{lightgray}\inst{7}}, Vladimir Loncar{\color{lightgray}\inst{7}}, Maurizio Pierini{\color{lightgray}\inst{7}}, Sioni Summers{\color{lightgray}\inst{7}}, Jennifer Ngadiuba{\color{lightgray}\inst{8}}, Mia Liu{\color{lightgray}\inst{9}}, Edward Kreinar{\color{lightgray}\inst{10}}, Zhenbin Wu{\color{lightgray}\inst{11}}}
@@ -183,7 +165,7 @@
               \end{column}
             \begin{column}{.49\textwidth}
              \begin{center}
-                    \includegraphics[width=0.9\linewidth]{OpenCL_GNN.pdf}
+                    \includegraphics[width=0.9\linewidth]{figures/OpenCL_GNN.pdf}
                   \end{center}
                 \end{column}
                 \end{columns}
@@ -219,7 +201,7 @@
               \end{column}
               \begin{column}{.49\textwidth}
                 \begin{center}
-                  \includegraphics[width=0.9\linewidth]{hls4ml_GNN.pdf}
+                  \includegraphics[width=0.9\linewidth]{figures/hls4ml_GNN.pdf}
                 \end{center}
               \end{column}
               \end{columns}
@@ -281,8 +263,8 @@
                 \item Tested with Arria 10 GX 1150 FPGA
               \end{itemize}
               \begin{center}
-                \includegraphics[width=0.33\linewidth]{resource_bit_precision_ocl.pdf}
-                \includegraphics[width=0.66\linewidth]{scalability_study_v2.pdf}
+                \includegraphics[width=0.33\linewidth]{figures/resource_bit_precision_ocl.pdf}
+                \includegraphics[width=0.66\linewidth]{figures/scalability_study_v2.pdf}
               \end{center}
             \end{block}
             
@@ -305,10 +287,10 @@
                 \item Scans vs reuse factor show trade-off between resource usage and latency
                 \item Tested against Xilinx Kintex Ultrascale 115 FPGA
                 \begin{center}
-                    \includegraphics[width=0.33\linewidth]{Resources_vs_BP.pdf}
-                    \includegraphics[width=0.33\linewidth]{Latency_vs_BP.pdf}
-                    \includegraphics[width=0.33\linewidth]{Resources_vs_RF.pdf}
-                    \includegraphics[width=0.33\linewidth]{Latency_vs_RF.pdf}
+                    \includegraphics[width=0.33\linewidth]{figures/Resources_vs_BP.pdf}
+                    \includegraphics[width=0.33\linewidth]{figures/Latency_vs_BP.pdf}
+                    \includegraphics[width=0.33\linewidth]{figures/Resources_vs_RF.pdf}
+                    \includegraphics[width=0.33\linewidth]{figures/Latency_vs_RF.pdf}
                 \end{center}
               \end{itemize}
             \end{block}
@@ -326,7 +308,7 @@
                 \end{itemize}
               \end{itemize}
                           \begin{flushright}\vspace{-3ex}
-                            \href{https://arxiv.org/abs/2012.01563}{\includegraphics[width=0.18\textwidth]{gnn_fpga_qr_code.png}}
+                            \href{https://arxiv.org/abs/2012.01563}{\includegraphics[width=0.18\textwidth]{figures/gnn_fpga_qr_code.png}}
                           \end{flushright}
                   \end{block}                  
           }

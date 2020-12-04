@@ -6,7 +6,7 @@
 \mode<presentation>
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setbeamercolor{headline}{fg=taaluminium,bg=ta3skyblue}
+\setbeamercolor{headline}{fg=taaluminium,bg=black}
 \setbeamercolor{footline}{fg=taorange, bg=ta3gray}
 \setbeamerfont{footline}{size=\large,series=\tt}
 \setbeamercolor{separation line}{bg=taorange}
@@ -53,6 +53,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \setbeamertemplate{headline}{  
   \leavevmode
 
@@ -61,9 +62,8 @@
       \begin{column}{.02\paperwidth}
       \end{column}
       \begin{column}{.1\paperwidth}
-        \vskip4ex
+        \vskip12ex
         \begin{center}
-          \includegraphics[width=1.1\linewidth]{figures/UCSanDiegoLogo-White.png}\\[6ex]
           \includegraphics[width=1.1\linewidth]{figures/fml2.png}
         \end{center}
         \vskip2ex
@@ -76,7 +76,7 @@
         \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}     
       \end{column}
       \begin{column}{.1\paperwidth}
-        \vskip4ex
+        \vskip16ex
         \begin{center}
           \includegraphics[width=\linewidth]{figures/iris-hep.png}
         \end{center}
@@ -93,22 +93,9 @@
   \end{beamercolorbox}
 }
 
-%  \setbeamertemplate{headline}{  
-%    \leavevmode
-%    \begin{beamercolorbox}[sep=0.5cm,wd=.8\paperwidth]{headline}
-%      \usebeamercolor{title in headline}{\raggedleft\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
-%      \usebeamercolor{author in headline}{\raggedleft\color{fg}\large{\insertauthor}\\[1ex]}
-%      \usebeamercolor{institute in headline}{\raggedleft\color{fg}\large{\insertinstitute}\\[1ex]}     
-%    \end{beamercolorbox}%
-%    \begin{beamercolorbox}[wd=.2\paperwidth]{logo in headline}
-%      \centering
-%      \LARGE{LOGO}
-%    \end{beamercolorbox}  
-
-
-%}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \setbeamertemplate{footline}{
   \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
     \rule{0pt}{3pt}
@@ -117,6 +104,8 @@
   \leavevmode%
   \begin{beamercolorbox}[ht=4ex,leftskip=1em,rightskip=1em]{author in
       head/foot}%
+    \href{https://fastmachinelearning.org}{fastmachinelearning.org}
+    \hfill
     \href{https://iris-hep.org}{iris-hep.org}
     \hfill
     \href{https://ml4physicalsciences.github.io/2020}{\textsf{Machine
@@ -128,7 +117,6 @@
     \rule{0pt}{3pt}
   \end{beamercolorbox}
 }
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Display a grid to help align images ... and it looks nice with this color scheme
 %\beamertemplategridbackground[1cm]
